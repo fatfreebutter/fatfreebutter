@@ -5,9 +5,9 @@
 
 ## About
 
-MSc Computer Science student (2nd semester) at the University of Freiburg, with 3 years of industry experience in cloud security support.
+MSc Computer Science student (3rd semester) at the University of Freiburg, with 3 years of industry experience in cloud security support.
 
-My academic focus spans machine learning, AI fundamentals, and hardware security. I am broadly interested in AI/ML research and the long-term potential of building intelligent systems that automate low-value work.
+My academic focus spans machine learning, AI fundamentals, and Cyber Security. I am broadly interested in AI/ML research and the long-term potential of building intelligent systems that automate low-value work.
 
 ---
 

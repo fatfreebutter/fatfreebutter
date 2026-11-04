@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 570" width="960" height="570" font-family="Consolas,Menlo,'DejaVu Sans Mono',monospace" font-size="15">
+<style>
+.key {fill: #ffa657;}
+.value {fill: #a5d6ff;}
+.dots {fill: #616e7f;}
+text, tspan {white-space: pre;}
+</style>
+<rect width="960" height="570" fill="#161b22" rx="15"/>
+<text fill="#c9d1d9">
+<tspan x="15" y="50">                 *****+                 </tspan>
+<tspan x="15" y="70">            ############**+=            </tspan>
+<tspan x="15" y="90">         #################**+==         </tspan>
+<tspan x="15" y="110">       ############*****####**+=-       </tspan>
+<tspan x="15" y="130">     ######%%%%%%%%%##*********+=-:     </tspan>
+<tspan x="15" y="150">    #####%%@@@@@@@@@%%##*+++****+=-:    </tspan>
+<tspan x="15" y="170">   #####%@@@@@@@%%%@@@%%#*++++++++=-:   </tspan>
+<tspan x="15" y="190">  #####%@@@@%%#######%%%%#*++==+++==-:  </tspan>
+<tspan x="15" y="210">  ##*#%@@@%%####******##%%#*+=======-:  </tspan>
+<tspan x="15" y="230"> *#**#%@@%%#########*****###*+======-:: </tspan>
+<tspan x="15" y="250"> ****#%@%%#**##%%@@%%#*++*##*+=---==-:: </tspan>
+<tspan x="15" y="270"> ****#%%%#**##%%@@@%%%#+++*#*+=------:: </tspan>
+<tspan x="15" y="290"> ****#%%%#***#%%@%%##%#+=+*#*+=------:: </tspan>
+<tspan x="15" y="310"> **+*#%%##***##%%%%%%#*+=+***+--::---:: </tspan>
+<tspan x="15" y="330"> ++++*#%##*++**######*+==+**+=-:::---:: </tspan>
+<tspan x="15" y="350"> +++++*###*+++++***++===+**+=-:::::--:: </tspan>
+<tspan x="15" y="370">  +==+**##**+++========+**+=-:::::--::  </tspan>
+<tspan x="15" y="390">  ====++*#***+++====+++*++=-:::::--:::  </tspan>
+<tspan x="15" y="410">   =====+******+++++*+++=-:::::---:::   </tspan>
+<tspan x="15" y="430">    ----==++++*++++++==-::::::---::.    </tspan>
+<tspan x="15" y="450">     :-----========--:::.:::---:::.     </tspan>
+<tspan x="15" y="470">       :::::::::::::...:::---:::.       </tspan>
+<tspan x="15" y="490">         ...........::::--:::..         </tspan>
+<tspan x="15" y="510">            ...::::::::::::.            </tspan>
+<tspan x="15" y="530">                 ::::::                 </tspan>
+</text>
+<text fill="#c9d1d9">
+<tspan x="395" y="30">anurag@freiburg <tspan class="dots">--------------------------------------------</tspan></tspan>
+<tspan x="395" y="50"><tspan class="key">OS</tspan>:<tspan class="dots"> ........................................... </tspan><tspan class="value">macOS, Linux</tspan></tspan>
+<tspan x="395" y="70"><tspan class="key">Uptime</tspan>:<tspan class="dots"> ....................... </tspan><tspan class="value">24 years, 10 months, 16 days</tspan></tspan>
+<tspan x="395" y="90"><tspan class="key">Host</tspan>:<tspan class="dots"> ...................... </tspan><tspan class="value">University of Freiburg, Germany</tspan></tspan>
+<tspan x="395" y="110"><tspan class="key">Kernel</tspan>:<tspan class="dots"> ................. </tspan><tspan class="value">MSc Computer Science, 3rd semester</tspan></tspan>
+<tspan x="395" y="130"><tspan class="key">Role</tspan>:<tspan class="dots"> ............. </tspan><tspan class="value">Research Assistant, Uniklinikum Freiburg</tspan></tspan>
+<tspan x="395" y="150"><tspan class="key">Origin</tspan>:<tspan class="dots"> ............................... </tspan><tspan class="value">New Delhi -&gt; Germany</tspan></tspan>
+<tspan x="395" y="170"><tspan class="key">Status</tspan>:<tspan class="dots"> ...................... </tspan><tspan class="value">Open to HiWi / research roles</tspan></tspan>
+<tspan x="395" y="190"></tspan>
+<tspan x="395" y="210"><tspan class="key">Focus</tspan>:<tspan class="dots"> .................. </tspan><tspan class="value">ML, AI Fundamentals, Cybersecurity</tspan></tspan>
+<tspan x="395" y="230"><tspan class="key">Languages</tspan>:<tspan class="dots"> .................... </tspan><tspan class="value">Python, TypeScript, Assembly</tspan></tspan>
+<tspan x="395" y="250"><tspan class="key">AI</tspan>:<tspan class="dots"> ..................... </tspan><tspan class="value">LiveKit Agents, Voice AI, Langfuse</tspan></tspan>
+<tspan x="395" y="270"><tspan class="key">Security</tspan>:<tspan class="dots"> ........... </tspan><tspan class="value">AWS, Azure, IAM, PAM, Network Security</tspan></tspan>
+<tspan x="395" y="290"><tspan class="key">Tools</tspan>:<tspan class="dots"> ................. </tspan><tspan class="value">Git, Docker, Linux, React, Three.js</tspan></tspan>
+<tspan x="395" y="310"></tspan>
+<tspan x="395" y="330">- Experience <tspan class="dots">-----------------------------------------------</tspan></tspan>
+<tspan x="395" y="350"><tspan class="key">Nagarro</tspan>:<tspan class="dots"> ........................... </tspan><tspan class="value">Cloud Security Engineer</tspan></tspan>
+<tspan x="395" y="370"><tspan class="key">HCL Tech</tspan>:<tspan class="dots"> ............................ </tspan><tspan class="value">PAM Security Engineer</tspan></tspan>
+<tspan x="395" y="390"><tspan class="key">IIT Madras</tspan>:<tspan class="dots"> .................. </tspan><tspan class="value">Cyber Security Analyst Intern</tspan></tspan>
+<tspan x="395" y="410"></tspan>
+<tspan x="395" y="430">- Projects <tspan class="dots">-------------------------------------------------</tspan></tspan>
+<tspan x="395" y="450"><tspan class="key">linmap3d</tspan>:<tspan class="dots"> .................. </tspan><tspan class="value">3D/2D linear algebra visualizer</tspan></tspan>
+<tspan x="395" y="470"><tspan class="key">voice-agent</tspan>:<tspan class="dots"> ............. </tspan><tspan class="value">Multi-pipeline phone AI (private)</tspan></tspan>
+<tspan x="395" y="490"></tspan>
+<tspan x="395" y="510">- GitHub Stats <tspan class="dots">---------------------------------------------</tspan></tspan>
+<tspan x="395" y="530"><tspan class="key">Repos</tspan>:<tspan class="dots"> ............................. </tspan><tspan class="value">5</tspan><tspan class="dots"> | </tspan><tspan class="key">Stars</tspan>:<tspan class="dots"> .......... </tspan><tspan class="value">1</tspan></tspan>
+<tspan x="395" y="550"><tspan class="key">Commits this year</tspan>:<tspan class="dots"> ................ </tspan><tspan class="value">10</tspan><tspan class="dots"> | </tspan><tspan class="key">Followers</tspan>:<tspan class="dots"> ...... </tspan><tspan class="value">4</tspan></tspan>
+</text>
+</svg>

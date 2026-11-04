@@ -1,46 +1,8 @@
-## Anurag 
-*MSc Computer Science · Albert-Ludwigs-Universität Freiburg · New Delhi → Germany*
+<a href="https://github.com/fatfreebutter">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/fatfreebutter/fatfreebutter/main/dark_mode.svg">
+    <img alt="Anurag: MSc Computer Science at the University of Freiburg and Research Assistant at Uniklinikum Freiburg. Focus: machine learning, AI fundamentals and cybersecurity. Previously Cloud Security Engineer at Nagarro, PAM Security Engineer at HCL Tech and Cyber Security Analyst Intern at IIT Madras. Open to HiWi and research roles." src="https://raw.githubusercontent.com/fatfreebutter/fatfreebutter/main/light_mode.svg">
+  </picture>
+</a>
 
----
-
-## About
-
-MSc Computer Science student (3rd semester) at the University of Freiburg, with 3 years of industry experience in cloud security support.
-
-My academic focus spans machine learning, AI fundamentals, and Cyber Security. I am broadly interested in AI/ML research and the long-term potential of building intelligent systems that automate low-value work.
-
----
-
-## Technical Skills
-
-**Cloud & Security**
-AWS · Azure · IAM · Cloud Security · Network Security · Vulnerability Analysis
-
-**Machine Learning & AI**
-Python · Scikit-learn · Data Analysis · ML Fundamentals
-
-**Hardware & Systems**
-Hardware Security · Assembly Language · Embedded Systems · Packaging Technology
-
-**Tools & Platforms**
-Git · Linux · VS Code · LaTeX
-
----
-
-## Currently Learning
-
-- Machine Learning — supervised/unsupervised methods, model evaluation
-- Fundamentals of Artificial Intelligence — search, reasoning, planning
-- Hardware Security — side-channel attacks, secure architectures
-- Assembly & Packaging Technology — semiconductor design and fabrication
-- Software Engineering — systems design and development practices
-
----
-
-## Background
-
-Prior to graduate studies, I worked 3 years in cloud security support, gaining hands-on experience with enterprise infrastructure, incident response, and security tooling. I bring that applied perspective into my current research-oriented coursework.
-
----
-
-*Open to HiWi / research assistant opportunities in ML, computer vision, or cybersecurity.*
+[Website](https://fatfreebutter.github.io) · [linmap3d live demo](https://fatfreebutter.github.io/linmap3d/)

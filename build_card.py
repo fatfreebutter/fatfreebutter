@@ -15,7 +15,8 @@ from xml.sax.saxutils import escape
 USER = "fatfreebutter"
 BIRTHDAY = datetime.date(2001, 12, 19)
 ART_COLS, ART_ROWS = 40, 25
-INFO_ROWS = 27
+INFO_ROWS = 28
+FRAMES = 12
 INFO_COLS = 60
 THEMES = {
     "dark_mode.svg": ("#161b22", "#c9d1d9", "#ffa657", "#a5d6ff", "#616e7f"),
@@ -34,11 +35,14 @@ def uptime(today: datetime.date, born: datetime.date = BIRTHDAY) -> str:
 
 
 def stats() -> dict[str, int]:
+    week_ago = datetime.datetime.now(datetime.UTC) - datetime.timedelta(days=7)
     query = (
         '{user(login:"%s"){followers{totalCount}'
+        'week:contributionsCollection(from:"%s"){totalCommitContributions}'
         "repositories(ownerAffiliations:OWNER,privacy:PUBLIC,first:100)"
         "{totalCount nodes{stargazerCount}}"
-        "contributionsCollection{totalCommitContributions}}}" % USER
+        "contributionsCollection{totalCommitContributions}}}"
+        % (USER, week_ago.strftime("%Y-%m-%dT%H:%M:%SZ"))
     )
     request = urllib.request.Request(
         "https://api.github.com/graphql",
@@ -52,12 +56,13 @@ def stats() -> dict[str, int]:
         "repos": repos["totalCount"],
         "stars": sum(r["stargazerCount"] for r in repos["nodes"]),
         "commits": user["contributionsCollection"]["totalCommitContributions"],
+        "week": user["week"]["totalCommitContributions"],
         "followers": user["followers"]["totalCount"],
     }
 
 
-def art() -> list[str]:
-    """A shaded sphere rippling with sound waves."""
+def art(phase: float = 0.0, loudness: float = 0.0) -> list[str]:
+    """A shaded sphere rippling with sound waves; `loudness` is 0 to 1."""
     ramp = " .:-=+*#%@"
     lines = []
     for row in range(ART_ROWS):
@@ -71,11 +76,19 @@ def art() -> list[str]:
                 continue
             z = math.sqrt(1 - r * r)
             light = max(0.0, -0.45 * x - 0.55 * y + 0.7 * z)
-            wave = 0.5 + 0.5 * math.sin(r * 15 + 2 * math.sin(3 * x))
-            level = 0.15 + 0.6 * light + 0.3 * wave * z
+            wave = 0.5 + 0.5 * math.sin(r * 15 - phase + 2 * math.sin(3 * x))
+            level = 0.15 + 0.6 * light + (0.2 + 0.35 * loudness) * wave * z
             line += ramp[min(int(level * len(ramp)), len(ramp) - 1)]
         lines.append(line)
     return lines
+
+
+def loudness(commits_this_week: int) -> float:
+    return min(commits_this_week / 15, 1.0)
+
+
+def wave_label(level: float) -> str:
+    return "loud" if level > 0.66 else "steady" if level > 0.2 else "calm"
 
 
 def info(s: dict[str, int]) -> list[tuple]:
@@ -109,7 +122,8 @@ def info(s: dict[str, int]) -> list[tuple]:
         ("blank",),
         ("title", "- GitHub Stats"),
         pair(("Repos", s["repos"]), ("Stars", s["stars"])),
-        pair(("Commits this year", s["commits"]), ("Followers", s["followers"])),
+        pair(("Commits (1 year)", s["commits"]), ("Followers", s["followers"])),
+        pair(("Commits (7 days)", s["week"]), ("Wave", wave_label(loudness(s["week"])))),
     ]
 
 
@@ -148,25 +162,38 @@ def svg(theme: tuple, s: dict[str, int]) -> str:
     background, foreground, key, value, dots = theme
     lines = info(s)
     assert len(lines) == INFO_ROWS, f"{len(lines)} info lines, expected {INFO_ROWS}"
-    art_text = "\n".join(
-        f'<tspan x="15" y="{50 + 20 * i}">{escape(row)}</tspan>'
-        for i, row in enumerate(art())
-    )
+    level = loudness(s["week"])
+    seconds = 6 - 4.5 * level  # one ripple cycle: slower when quiet
+    frames = []
+    for k in range(FRAMES):
+        rows = art(2 * math.pi * k / FRAMES, level)
+        tspans = "".join(
+            f'<tspan x="15" y="{60 + 20 * i}">{escape(row)}</tspan>'
+            for i, row in enumerate(rows)
+        )
+        delay = (k - FRAMES) * seconds / FRAMES
+        frames.append(
+            f'<text class="frame f{k}" fill="{foreground}" '
+            f'style="animation-delay:{delay:.3f}s">{tspans}</text>'
+        )
+    art_text = "\n".join(frames)
     info_text = "\n".join(
         info_tspans(line, 395, 30 + 20 * i) for i, line in enumerate(lines)
     )
     return f"""<?xml version="1.0" encoding="UTF-8"?>
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 570" width="960" height="570" font-family="Consolas,Menlo,'DejaVu Sans Mono',monospace" font-size="15">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 590" width="960" height="590" font-family="Consolas,Menlo,'DejaVu Sans Mono',monospace" font-size="15">
 <style>
 .key {{fill: {key};}}
 .value {{fill: {value};}}
 .dots {{fill: {dots};}}
 text, tspan {{white-space: pre;}}
+.frame {{opacity: 0; animation: ripple {seconds:.2f}s step-end infinite;}}
+.f0 {{opacity: 1;}}
+@keyframes ripple {{0% {{opacity: 1;}} {100 / FRAMES:.3f}% {{opacity: 0;}} 100% {{opacity: 0;}}}}
+@media (prefers-reduced-motion: reduce) {{.frame {{animation: none;}}}}
 </style>
-<rect width="960" height="570" fill="{background}" rx="15"/>
-<text fill="{foreground}">
+<rect width="960" height="590" fill="{background}" rx="15"/>
 {art_text}
-</text>
 <text fill="{foreground}">
 {info_text}
 </text>

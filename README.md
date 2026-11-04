@@ -5,4 +5,9 @@
   </picture>
 </a>
 
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://profile-live.anuragftw1912.workers.dev/?theme=dark">
+  <img alt="Live status: current time in Freiburg and latest public push" src="https://profile-live.anuragftw1912.workers.dev/?theme=light">
+</picture>
+
 [Website](https://fatfreebutter.github.io) · [linmap3d live demo](https://fatfreebutter.github.io/linmap3d/)

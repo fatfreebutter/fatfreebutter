@@ -61,6 +61,6 @@ text, tspan {white-space: pre;}
 <tspan x="395" y="490"></tspan>
 <tspan x="395" y="510">- GitHub Stats <tspan class="dots">---------------------------------------------</tspan></tspan>
 <tspan x="395" y="530"><tspan class="key">Repos</tspan>:<tspan class="dots"> ............................. </tspan><tspan class="value">5</tspan><tspan class="dots"> | </tspan><tspan class="key">Stars</tspan>:<tspan class="dots"> .......... </tspan><tspan class="value">1</tspan></tspan>
-<tspan x="395" y="550"><tspan class="key">Commits this year</tspan>:<tspan class="dots"> ................ </tspan><tspan class="value">10</tspan><tspan class="dots"> | </tspan><tspan class="key">Followers</tspan>:<tspan class="dots"> ...... </tspan><tspan class="value">4</tspan></tspan>
+<tspan x="395" y="550"><tspan class="key">Commits this year</tspan>:<tspan class="dots"> ................ </tspan><tspan class="value">11</tspan><tspan class="dots"> | </tspan><tspan class="key">Followers</tspan>:<tspan class="dots"> ...... </tspan><tspan class="value">4</tspan></tspan>
 </text>
 </svg>
